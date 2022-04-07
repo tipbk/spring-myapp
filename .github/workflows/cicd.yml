@@ -24,4 +24,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and Deploy
-        run: mvn compile jib:build
+        run: mvn compile jib:build -Djib.to.auth.username=${{ SECRETS.DOCKER_USERNAME }} -Djib.to.auth.password=${{ SECRETS.DOCKER_PASSWORD }}
