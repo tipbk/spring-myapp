@@ -24,4 +24,4 @@ jobs:
             distribution: 'adopt'
 
       - name: Build and Deploy
-        run: mvn compile jib:build
+        uses: mvn compile jib:build
